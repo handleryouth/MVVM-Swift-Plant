@@ -9,58 +9,69 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    /*
+     ViewModel Binding: Utilizes PlantCollectionViewModel for underlying logic and data.
+     */
+    @ObservedObject var viewModel = PlantCollectionViewModel()
+    @State private var showingAddPlant = false
+    @State private var plantNameInput = ""
+    @State private var plantWaterFrequencyInput = 1
+    
+    
+    private func deletePlant(at offsets: IndexSet) {
+        offsets.forEach { viewModel.removePlant(viewModel.plants[$0]) }
+    }
+    
+    private func addPlant() {
+        viewModel.addPlant(
+            Plant(
+                name: plantNameInput, wateringFrequency: plantWaterFrequencyInput)
+        )
+    }
+    
+    private func clearInputs() {
+        plantNameInput = ""
+        plantWaterFrequencyInput = 1
+    }
+    
+    
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                ForEach(viewModel.plants) {
+                    plant in HStack {
+                        Text(plant.name)
+                        Spacer()
+                        Text("Water Every \(plant.wateringFrequency) days")
+                        Button(action: { viewModel.updateWatering(for: plant) }) {
+                            Image(systemName: "drop.fill")
+                        }
                     }
-                }
-                .onDelete(perform: deleteItems)
+                }.onDelete(perform: deletePlant)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { showingAddPlant.toggle() }) {
+                        Image(systemName: "plus")
                     }
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            .alert("Add Plant", isPresented: $showingAddPlant) {
+                TextField("Plant Name", text: $plantNameInput)
+                TextField("Water Frequency", value: $plantWaterFrequencyInput, formatter: NumberFormatter())
+                Button("OK", action: addPlant)
+                Button("Cancel", role: .cancel, action: clearInputs)
             }
+            .navigationTitle("My Plants")
         }
+           
     }
 }
 
+
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

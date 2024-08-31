@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		EAFDD63A2C816F180054DB81 /* Todo_List_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD6392C816F180054DB81 /* Todo_List_MVVMApp.swift */; };
 		EAFDD63C2C816F180054DB81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD63B2C816F180054DB81 /* ContentView.swift */; };
-		EAFDD63E2C816F180054DB81 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD63D2C816F180054DB81 /* Item.swift */; };
 		EAFDD6402C816F1A0054DB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFDD63F2C816F1A0054DB81 /* Assets.xcassets */; };
 		EAFDD6442C816F1A0054DB81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFDD6432C816F1A0054DB81 /* Preview Assets.xcassets */; };
 		EAFDD64E2C816F1A0054DB81 /* Todo_List_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD64D2C816F1A0054DB81 /* Todo_List_MVVMTests.swift */; };
 		EAFDD6582C816F1A0054DB81 /* Todo_List_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD6572C816F1A0054DB81 /* Todo_List_MVVMUITests.swift */; };
 		EAFDD65A2C816F1A0054DB81 /* Todo_List_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD6592C816F1A0054DB81 /* Todo_List_MVVMUITestsLaunchTests.swift */; };
+		EAFDD66D2C8173F10054DB81 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD66C2C8173F10054DB81 /* Plant.swift */; };
+		EAFDD66F2C81743C0054DB81 /* PlantCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDD66E2C81743C0054DB81 /* PlantCollectionViewModel.swift */; };
+		EAFDD6712C81CDF30054DB81 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDD6702C81CDF30054DB81 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		EAFDD6362C816F180054DB81 /* Todo-List-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-List-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFDD6392C816F180054DB81 /* Todo_List_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_List_MVVMApp.swift; sourceTree = "<group>"; };
 		EAFDD63B2C816F180054DB81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EAFDD63D2C816F180054DB81 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EAFDD63F2C816F1A0054DB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAFDD6412C816F1A0054DB81 /* Todo_List_MVVM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Todo_List_MVVM.entitlements; sourceTree = "<group>"; };
 		EAFDD6432C816F1A0054DB81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		EAFDD6532C816F1A0054DB81 /* Todo-List-MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Todo-List-MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFDD6572C816F1A0054DB81 /* Todo_List_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_List_MVVMUITests.swift; sourceTree = "<group>"; };
 		EAFDD6592C816F1A0054DB81 /* Todo_List_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_List_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAFDD66C2C8173F10054DB81 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		EAFDD66E2C81743C0054DB81 /* PlantCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewModel.swift; sourceTree = "<group>"; };
+		EAFDD6702C81CDF30054DB81 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		EAFDD62D2C816F180054DB81 = {
 			isa = PBXGroup;
 			children = (
+				EAFDD6702C81CDF30054DB81 /* Launch Screen.storyboard */,
 				EAFDD6382C816F180054DB81 /* Todo-List-MVVM */,
 				EAFDD64C2C816F1A0054DB81 /* Todo-List-MVVMTests */,
 				EAFDD6562C816F1A0054DB81 /* Todo-List-MVVMUITests */,
@@ -97,9 +102,10 @@
 		EAFDD6382C816F180054DB81 /* Todo-List-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				EAFDD6692C8170380054DB81 /* ViewModel */,
+				EAFDD6662C81700B0054DB81 /* Model */,
 				EAFDD6392C816F180054DB81 /* Todo_List_MVVMApp.swift */,
 				EAFDD63B2C816F180054DB81 /* ContentView.swift */,
-				EAFDD63D2C816F180054DB81 /* Item.swift */,
 				EAFDD63F2C816F1A0054DB81 /* Assets.xcassets */,
 				EAFDD6412C816F1A0054DB81 /* Todo_List_MVVM.entitlements */,
 				EAFDD6422C816F1A0054DB81 /* Preview Content */,
@@ -130,6 +136,22 @@
 				EAFDD6592C816F1A0054DB81 /* Todo_List_MVVMUITestsLaunchTests.swift */,
 			);
 			path = "Todo-List-MVVMUITests";
+			sourceTree = "<group>";
+		};
+		EAFDD6662C81700B0054DB81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDD66C2C8173F10054DB81 /* Plant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAFDD6692C8170380054DB81 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDD66E2C81743C0054DB81 /* PlantCollectionViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFDD6712C81CDF30054DB81 /* Launch Screen.storyboard in Resources */,
 				EAFDD6442C816F1A0054DB81 /* Preview Assets.xcassets in Resources */,
 				EAFDD6402C816F1A0054DB81 /* Assets.xcassets in Resources */,
 			);
@@ -263,7 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFDD63C2C816F180054DB81 /* ContentView.swift in Sources */,
-				EAFDD63E2C816F180054DB81 /* Item.swift in Sources */,
+				EAFDD66F2C81743C0054DB81 /* PlantCollectionViewModel.swift in Sources */,
+				EAFDD66D2C8173F10054DB81 /* Plant.swift in Sources */,
 				EAFDD63A2C816F180054DB81 /* Todo_List_MVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,16 +452,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Todo List";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -446,7 +471,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "handleryouth.app.Todo-List-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,16 +492,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Todo List";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -484,7 +511,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "handleryouth.app.Todo-List-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
